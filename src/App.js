@@ -5,6 +5,7 @@ import Footer from './components/footercomponent/Footer';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
+import Banner from './components/bannercomponent/Banner';
 import './assets/css/style.css';
 
 class App extends Component {
@@ -15,9 +16,11 @@ class App extends Component {
         <Router>
           <div className ="App">
             <Header />
-                <Route exact path="/" component={Home} />
-                <Route exact path="/About" component={About} />
-                <Route exact path="/Contact" component={Contact} />
+                <div className ="container">
+                  <Route exact path="/" component={Home} />
+                  <Route exact path="/About" component={About} />
+                  <Route exact path="/Contact" component={Contact} />
+                </div>
             <Footer />
           </div>
         </Router>
